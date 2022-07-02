@@ -5,7 +5,7 @@ export default function Card(props) {
         <div className="container">
             <img alt="item" src={`images/${props.item.img}`} className="img" />
             <div className="info">
-                <div>
+                <div className="locationUrl">
                     <img alt="ping" src="images/ping.png" className="ping" />
                     <a href={props.item.googleMapsUrl}>{props.item.location}</a>
                 </div>
