@@ -117,7 +117,12 @@ body{
         flex-direction: column;
         width: 300px;
         padding: 10px;
+        align-items: center;
+    }
 
+    .info {
+        align-items: center;
+        margin: 0;
     }
 
     .img{
