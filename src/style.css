@@ -80,6 +80,7 @@ body{
 
     .container{
         width: 500px;
+        padding: 30px;
     }
 
     .img{
@@ -113,12 +114,15 @@ body{
     }
 
     .container{
+        flex-direction: column;
         width: 300px;
+        padding: 10px;
+
     }
 
     .img{
-        width: 120px;
-        height: 170px;
+        width: 170px;
+        height: 220px;
     }
 
     .locationUrl{
