@@ -13,12 +13,12 @@ function AddCard(props) {
         console.log(image)
     }, [data])
 
-    const [location, setLocation] = useState()
-    const [name, setName] = useState()
-    const [startDate, setStartDate] = useState()
-    const [endDate, setEndDate] = useState()
-    const [description, setDescription] = useState()
-    const [image, setImage] = useState()
+    const [location, setLocation] = useState(null)
+    const [name, setName] = useState(null)
+    const [startDate, setStartDate] = useState(null)
+    const [endDate, setEndDate] = useState(null)
+    const [description, setDescription] = useState(null)
+    const [image, setImage] = useState(null)
 
 
     function handleLocation(e) { setLocation(e.target.value) }
@@ -49,7 +49,9 @@ function AddCard(props) {
 
 
         // set data with info from input field
-        setData([...newData, {id: generateID(), location, name, startDate, endDate, description, image }])
+        if (location && name && startDate && endDate && description) {
+            setData([...newData, { id: generateID(), location, name, startDate, endDate, description, image }])
+        }
     }
 
 
@@ -61,12 +63,12 @@ function AddCard(props) {
 
                     <div className='input-section'>
                         <div className='label'>Location:</div>
-                        <input onChange={handleLocation} type="text" placeholder='Location' />
+                        <input onChange={handleLocation} type="text" placeholder='Location' required />
                     </div>
 
                     <div className='input-section'>
                         <div className='label'>Destination:</div>
-                        <input onChange={handlename} type="text" placeholder='Destination' />
+                        <input onChange={handlename} type="text" placeholder='Destination' required />
                     </div>
 
                 </div>
@@ -75,11 +77,11 @@ function AddCard(props) {
 
                     <div className='input-section'>
                         <div className='label'>Start date:</div>
-                        <input onChange={handleStartDate} className='inputDate' type="date" placeholder='dd/mm/yyyy' />
+                        <input onChange={handleStartDate} className='inputDate' type="date" placeholder='dd/mm/yyyy' required />
                     </div>
                     <div className='input-section'>
                         <div className='label'>End date:</div>
-                        <input onChange={handleEndDate} className='inputDate' type="date" />
+                        <input onChange={handleEndDate} className='inputDate' type="date" required />
                     </div>
 
                 </div>

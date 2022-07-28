@@ -219,6 +219,10 @@ input:focus, textarea:focus {
     position: relative;
 }
 
+.card{
+    display: flex;
+}
+
 .container:hover {
     box-shadow: 0 1px 4px 1px rgb(187, 186, 186);
     transform: translateY(-2px);
@@ -575,9 +579,8 @@ input:focus, textarea:focus {
         width: 300px;
     }
 
-    .container {
+    .card{        
         flex-direction: column;
-        padding: 10px;
         align-items: center;
     }
 
