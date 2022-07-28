@@ -1,10 +1,12 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
     return (
         <div className="header">
-            <img alt="globe" src="images/globe.png" className="globe"/>
-            <h3>My travel journal.</h3>
+            <div className="globe">
+            {props.icon ? props.icon : ""}
+            </div>
+            <h3>{props.title}</h3>
         </div>
     )
 }

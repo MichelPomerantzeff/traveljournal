@@ -1,21 +1,25 @@
 import React from "react";
-import Header from "./components/Header";
-import Card from "./components/Card";
-import Data from './Data'
+import AddCard from "./components/AddCard";
+import Journal from "./components/Journal";
+import Topbar from "./components/Topbar";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
-  const trips = Data.map(item => {
-    return (
-      <Card
-        item={item}
-      />
-    )
-  })
+
   return (
-    <div>
-      <Header/>
-      {trips}
-    </div>
+    <Router>
+
+      <Topbar />
+
+      <Routes>
+        <Route path="/traveljournal" element={<AddCard />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/traveljournal/journal" element={<Journal />} />
+      </Routes>
+
+    </Router>
   )
 }
