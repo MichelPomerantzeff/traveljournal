@@ -9,10 +9,17 @@ export default function Card(props) {
     const edit = <FontAwesomeIcon icon={faPencil} />
     const trash = <FontAwesomeIcon icon={faTrash} />
 
+
+    function deleteCard(id) {
+        const travelData = JSON.parse(localStorage.getItem("travelData"))
+        const deleteItem = travelData.filter(data => data.id !== id)
+        localStorage.setItem('travelData', JSON.stringify(deleteItem))
+    }
+
     return (
         <div className="container">
             <div>
-                <img alt="poster" src={props.item.image} className="img" />
+                <img alt="poster" src={props.item.image ? props.item.image : "spare-imagejpg"} className="img" />
             </div>
             <div className="info">
                 <div className="locationUrl">
@@ -41,7 +48,7 @@ export default function Card(props) {
                     </span>
                 </button>
 
-                <button className="trash-pushable button-pushable" role="button">
+                <button onClick={() => deleteCard(props.item.id)} className="trash-pushable button-pushable" role="button">
                     <span className="trash-shadow button-shadow"></span>
                     <span className="trash-edge button-edge"></span>
                     <span className="trash-front button-front text">

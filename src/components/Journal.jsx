@@ -14,7 +14,7 @@ export default function Journal() {
   const [data, setData] = useState("")
 
   useEffect(() => {
-    const d = JSON.parse(localStorage.getItem("data"))
+    const d = JSON.parse(localStorage.getItem("travelData"))
     setData(d)
     console.log(d)
   }, [])
@@ -26,7 +26,7 @@ export default function Journal() {
     <div className="journal">
       <Header icon={globe} title={"My Travel Journal"} />
       {data.length > 0 ?
-        data.map(item => <Card key={item.location} item={item} />)
+        data.map(item => <Card key={item.location} item={item} data={data} />)
         :
         <div className="empty">
           Your journal is empty!!! <br /> Start writting about the magical moments you have experienced.

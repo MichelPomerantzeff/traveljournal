@@ -5,11 +5,11 @@ import Header from "./Header";
 function AddCard(props) {
 
 
-    const [data, setData] = useState(() => JSON.parse(localStorage.getItem("data")) || [])
+    const [data, setData] = useState(() => JSON.parse(localStorage.getItem("travelData")) || [])
 
     // Save data to localStorage everytime data is updated
     useEffect(() => {
-        localStorage.setItem("data", JSON.stringify(data))
+        localStorage.setItem("travelData", JSON.stringify(data))
         console.log(image)
     }, [data])
 
@@ -32,7 +32,6 @@ function AddCard(props) {
 
         const reader = new FileReader()
 
-
         reader.addEventListener("load", () => {
             setImage(reader.result)
         })
@@ -40,16 +39,17 @@ function AddCard(props) {
         reader.readAsDataURL(e.target.files[0])
     }
 
+    const generateID = () => Math.round(Math.random() * 10000)
 
     function handleSubmit(e) {
         // prevent button to submit data
         // e.preventDefault()
 
-        let newData = JSON.parse(localStorage.getItem("data"))
+        let newData = JSON.parse(localStorage.getItem("travelData"))
 
 
         // set data with info from input field
-        setData([...newData, { location, name, startDate, endDate, description, image }])
+        setData([...newData, {id: generateID(), location, name, startDate, endDate, description, image }])
     }
 
 
@@ -91,7 +91,8 @@ function AddCard(props) {
 
                 <div className='input-section'>
                     <div className='label'>Description:</div>
-                    <input onChange={handleDescription} type="text" placeholder='Description' />
+                    <textarea onChange={handleDescription} name="message" placeholder="Description"
+                        required></textarea>
                 </div>
 
                 <div className='buttons'>

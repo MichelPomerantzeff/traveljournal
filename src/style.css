@@ -67,7 +67,7 @@ body {
     width: 130px;
 } */
 
-input {
+input, textarea {
     background-color: #E5E5E5;
     border: solid 1px grey;
     outline: none;
@@ -78,7 +78,8 @@ input {
     width: 90%;
 }
 
-input:focus {
+
+input:focus, textarea:focus {
     box-shadow: 0 0 5px 2px #F55A5A;
     border: none;
 }
@@ -430,7 +431,7 @@ input:focus {
         font-size: 1.4rem;
     }
 
-    input {
+    input, textarea {
         padding: 15px;
         font-size: 1.3rem;
     }
@@ -470,7 +471,7 @@ input:focus {
         padding: 5px;
     }
 
-    input {
+    input, textarea {
         padding: 10px;
         font-size: 1rem;
     }
@@ -550,7 +551,7 @@ input:focus {
         padding: 5px;
     }
 
-    input {
+    input, textarea {
         padding: 2px;
         font-size: .6rem;
     }
