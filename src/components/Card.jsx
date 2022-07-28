@@ -19,7 +19,7 @@ export default function Card(props) {
     return (
         <div className="container">
             <div>
-                <img alt="poster" src={props.item.image ? props.item.image : "spare-image.jpg"} className="img" />
+                <img alt="poster" src={props.item.image ? props.item.image : "images/spare-image.jpg"} className="img" />
             </div>
             <div className="info">
                 <div className="locationUrl">
