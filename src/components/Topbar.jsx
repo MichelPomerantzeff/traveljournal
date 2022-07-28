@@ -5,7 +5,7 @@ function Topbar(props) {
     return (
         <div className='topbar'>
             <Link className="topbarLinks" to="/traveljournal">
-                Add Card
+                Add Trip
             </Link>
 
             <Link className="topbarLinks" to="/traveljournal/journal">

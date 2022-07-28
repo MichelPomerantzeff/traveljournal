@@ -22,7 +22,7 @@ export default function Card(props) {
                 <span className="title">{props.item.name}</span>
 
                 <div className="date">
-                    <span>Start date:{props.item.startDate} </span>
+                    <span>Start date: {props.item.startDate} </span>
                     <span>- End date: {props.item.endDate}</span>
                 </div>
                 <p className="description"> {props.item.description}  </p>

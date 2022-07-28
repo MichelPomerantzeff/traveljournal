@@ -57,7 +57,7 @@ function AddCard(props) {
 
     return (
         <div className='addCard'>
-            <Header icon={"Add Card"} />
+            <Header icon={"Add Trip"} />
             <form className='form'>
                 <div className='input-wrapper'>
 

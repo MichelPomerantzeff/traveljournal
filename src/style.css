@@ -221,6 +221,7 @@ input:focus, textarea:focus {
 
 .card{
     display: flex;
+    letter-spacing: 1px;
 }
 
 .container:hover {
