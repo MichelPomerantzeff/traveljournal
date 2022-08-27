@@ -1,3 +1,9 @@
+# Travel journal
+
+[>>> View Live Demo <<<](https://michelpomerantzeff.github.io/traveljournal)
+
+![travel-journal](https://user-images.githubusercontent.com/96065240/187039581-4ab03d68-dc03-4a77-83bc-3bcf036bb4f4.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
