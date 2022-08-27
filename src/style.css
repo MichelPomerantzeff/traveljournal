@@ -58,14 +58,10 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: 10px 50px;
-    height: 90px;
     padding: 5px;
     width: 95%;
 }
 
-/* .label {
-    width: 130px;
-} */
 
 input, textarea {
     background-color: #E5E5E5;
@@ -90,19 +86,14 @@ input:focus, textarea:focus {
     width: 95%;
 }
 
-/* .inputDate {
-    width: 250px;
-} */
-
 .file {
     width: 500px;
-}
+} 
 
 .buttons {
     display: flex;
     justify-content: center;
     height: 70px;
-
 }
 
 .save {
@@ -158,6 +149,9 @@ input:focus, textarea:focus {
     box-shadow: #006eff 0 3px 7px inset;
     transform: translateY(2px);
 }
+
+/* ADDCARD ENDS HERE  */
+
 
 
 
@@ -244,10 +238,6 @@ input:focus, textarea:focus {
     padding: 10px;
 }
 
-.locationUrl {
-    display: flex;
-}
-
 .pin {
     color: rgb(238, 44, 44);
     margin-right: 10px;
@@ -257,7 +247,7 @@ input:focus, textarea:focus {
     margin: 5px 0 5px 0;
     font-style: normal;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #2B283A;
 }
 
@@ -472,7 +462,6 @@ input:focus, textarea:focus {
 
     .input-section {
         margin: 0px 15px;
-        height: 75px;
         padding: 5px;
     }
 
@@ -543,7 +532,7 @@ input:focus, textarea:focus {
     .addCard {
         width: 300px;
         margin: 15px auto;
-        font-size: .6rem;
+        font-size: .7rem;
     }
 
     .form {
@@ -552,7 +541,6 @@ input:focus, textarea:focus {
 
     .input-section {
         margin: 0 5px;
-        height: 45px;
         padding: 5px;
     }
 
@@ -565,7 +553,9 @@ input:focus, textarea:focus {
         width: 200px;
     }
 
-
+    .input-wrapper{
+        flex-direction: column;
+    }
 
 
 

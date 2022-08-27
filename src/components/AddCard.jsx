@@ -13,18 +13,15 @@ function AddCard(props) {
         console.log(image)
     }, [data])
 
-    const [location, setLocation] = useState(null)
     const [name, setName] = useState(null)
     const [startDate, setStartDate] = useState(null)
-    const [endDate, setEndDate] = useState(null)
     const [description, setDescription] = useState(null)
     const [image, setImage] = useState(null)
 
 
-    function handleLocation(e) { setLocation(e.target.value) }
+
     function handlename(e) { setName(e.target.value) }
     function handleStartDate(e) { setStartDate(e.target.value) }
-    function handleEndDate(e) { setEndDate(e.target.value) }
     function handleDescription(e) { setDescription(e.target.value) }
 
     function handleImage(e) {
@@ -49,8 +46,8 @@ function AddCard(props) {
 
 
         // set data with info from input field
-        if (location && name && startDate && endDate && description) {
-            setData([...newData, { id: generateID(), location, name, startDate, endDate, description, image }])
+        if (name && startDate  && description) {
+            setData([...newData, { id: generateID(), name, startDate, description, image }])
         }
     }
 
@@ -58,42 +55,31 @@ function AddCard(props) {
     return (
         <div className='addCard'>
             <Header icon={"Add Trip"} />
+
             <form className='form'>
-                <div className='input-wrapper'>
-
-                    <div className='input-section'>
-                        <div className='label'>Location:</div>
-                        <input onChange={handleLocation} type="text" placeholder='Location' required />
-                    </div>
-
-                    <div className='input-section'>
-                        <div className='label'>Destination:</div>
-                        <input onChange={handlename} type="text" placeholder='Destination' required />
-                    </div>
-
-                </div>
-
-                <div className='input-wrapper'>
-
-                    <div className='input-section'>
-                        <div className='label'>Start date:</div>
-                        <input onChange={handleStartDate} className='inputDate' type="date" placeholder='dd/mm/yyyy' required />
-                    </div>
-                    <div className='input-section'>
-                        <div className='label'>End date:</div>
-                        <input onChange={handleEndDate} className='inputDate' type="date" required />
-                    </div>
-
-                </div>
 
                 <div className='input-section'>
-                    <div className='label'>Image:</div>
-                    <input className='file' onChange={handleImage} type="file" accept='image.jpg, image/png' />
+                    <div className='label'>Destination:</div>
+                    <input onChange={handlename} type="text" placeholder='Destination' required />
+                </div>
+
+
+                <div className='input-wrapper'>
+                    <div className='input-section'>
+                        <div className='label'>Date:</div>
+                        <input onChange={handleStartDate} className='inputDate' type="date" placeholder='dd/mm/yyyy' required />
+                    </div>
+
+
+                    <div className='input-section'>
+                        <div className='label'>Image:</div>
+                        <input className='file' onChange={handleImage} type="file" accept='image.jpg, image/png' />
+                    </div>
                 </div>
 
                 <div className='input-section'>
                     <div className='label'>Description:</div>
-                    <textarea onChange={handleDescription} name="message" placeholder="Description"
+                    <textarea rows="5" onChange={handleDescription} name="message" placeholder="Description"
                         required></textarea>
                 </div>
 
